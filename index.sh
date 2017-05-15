@@ -18,7 +18,7 @@ do
     if [[ $image == "sahara-"* ]]
     then
         dt=`date +%Y-%m-%d\ %H:%M`
-    	echo "<tr><td><a href=\"$image\">$image</a></td><td align="right">$dt  </td><td align="right">`ls -lah $image | awk '{print $5}'`</td><td>&nbsp;</td></tr>" >> index.html
+    	echo "<tr><td><a href=\"$image\">$image</a></td><td align="right">$dt  </td><td align="right">`ls -lah $1/$image | awk '{print $5}'`</td><td>&nbsp;</td></tr>" >> $1/index.html
     fi
 done
 
